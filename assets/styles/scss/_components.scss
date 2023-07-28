@@ -1,0 +1,416 @@
+@use 'variables';
+@use 'typography';
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.complexo-button {
+  text-decoration: none;
+
+  border-radius: $size-xl;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+
+  border: 1px solid $black;
+
+  text-transform: uppercase;
+
+  color: $black;
+  // @include font(400, $lg);
+  letter-spacing: -1px;
+
+  padding: 0.625rem 2rem;
+
+  &:hover {
+    background-color: $black;
+    transition: all ease .2s;
+    color: $white;
+
+    img {
+      filter: invert(1);
+    }
+  }
+
+  &[type="submit"] {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .link-w-icon {
+    &:hover {
+      color: $white;
+
+      img {
+        filter: invert(1);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    text-align: center;
+    @include font($default);
+  }
+}
+
+.link-w-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &:hover {
+    color: $gray;
+    transition: all .2s;
+
+    img {
+      filter: contrast(0.5);
+    }
+  }
+}
+
+.whatsapp-fab {
+  position: fixed;
+  right: 60px;
+  bottom: 60px;
+  z-index: 999;
+
+  background-color: $green;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+
+  width: 80px;
+  height: 80px;
+
+  line-height: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(0.7);
+    transition: all .2s;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+    filter: invert(1);
+  }
+
+  @media (max-width: 1120px) {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+.complexo-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: center;
+  gap: 1rem;
+
+  padding: 4.5rem;
+
+  border: 1px solid $gray;
+  border-radius: 8px;
+
+  text-align: center;
+
+  .complexo-button {
+    color: inherit;
+    border: 1px solid $gray;
+  }
+
+  .complexo-form-title {
+    @include font(900, $xl);
+    margin-bottom: 1rem;
+
+    @media (max-width: 576px) {
+      @include font(900, $md);
+    }
+  }
+
+  input,
+  textarea {
+    border: 1px solid $gray;
+    width: 100%;
+
+    color: inherit;
+    background-color: transparent;
+
+    padding: 1rem;
+
+    &::placeholder {
+      color: inherit;
+    }
+
+    &:focus-visible,
+    &:focus {
+      outline: 1px solid $black;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $gray;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+
+  &--dark {
+    @extend .complexo-form;
+
+    border: 1px solid $black;
+
+    input,
+    textarea {
+      border: 1px solid $black;
+    }
+
+    .complexo-button {
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
+.icon-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+
+  .icon-card-ico {
+    width: 122px;
+    height: 123px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      @extend .responsive-image;
+    }
+  }
+
+  .icon-card-content {
+    text-align: center;
+    @include font(400, $lg)
+  }
+
+  @media(min-width: 769px) and (max-width: 1366px) {
+    .icon-card-content {
+      font-size: $default;
+    }
+  }
+
+  @media(max-width: 768px) {
+    .icon-card-ico {
+      img {
+        filter: invert(1);
+      }
+    }
+  }
+}
+
+.maps {
+  overflow: hidden;
+  padding-bottom: 30%;
+  position: relative;
+  height: 0;
+  border-radius: 20px;
+
+  & iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    height: 100%;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    padding-bottom: 60%;
+  }
+}
+
+.contact {
+  display: flex;
+
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  @media (max-width: 768px) {
+    ul {
+      flex-direction: column;
+    }
+  }
+}
+
+.address {
+  display: flex;
+  justify-content: center;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .link-w-icon {
+    @media (max-width: 576px) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}
+
+.place-title {
+  @include font-title(9.375rem);
+  color: #BFBFBF;
+
+  @media(max-width: 768px) {
+    @include font-title(4.1875rem);
+    text-align: center;
+  }
+
+  @media(min-width: 769px) and (max-width: 1440px) {
+    @include font-title(6.375rem);
+  }
+}
+
+#place-title {
+  margin-top: -10.5rem;
+  max-width: 70%;
+  line-height: 100%;
+
+  @media(min-width: 769px) and (max-width: 1440px) {
+    margin-top: -5.5rem;
+  }
+}
+
+
+.carousel-places {
+  .place {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    img {
+      @extend .responsive-image;
+    }
+  }
+
+  @media (min-width: 768px) {
+
+    .place {
+      padding: 0 1rem;
+    }
+
+    .place-list {
+      opacity: 0;
+
+      li {
+        line-height: 150%;
+      }
+    }
+
+    &.slick-initialized {
+      .slick-current {
+        ul {
+          opacity: 1;
+        }
+      }
+
+      .slick-prev {
+        left: 25px;
+      }
+
+      .slick-next {
+        right: 25px;
+      }
+
+      img {
+        padding: 0 0.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    &.slick-initialized {
+      .place {
+        width: 75%;
+        margin: 0 auto;
+
+        img {
+          aspect-ratio: 9/16;
+          object-fit: cover;
+        }
+      }
+
+      .slick-prev {
+        left: 0px;
+      }
+
+      .slick-next {
+        right: 0px;
+      }
+    }
+  }
+}
+
+.carousel-cards.slick-initialized {
+  .icon-card {
+    width: 85%;
+    margin: 0 auto;
+
+  }
+
+  @media (max-width: 576px) {
+    .icon-card {
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .slick-prev {
+      left: -40px;
+    }
+
+    .slick-next {
+      right: -40px;
+    }
+  }
+}

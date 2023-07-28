@@ -1,0 +1,62 @@
+@use 'variables';
+
+.banner-heading {
+  @include font-title($h-lg);
+  color: $white;
+
+  span {
+    color: $black;
+  }
+
+  &--center {
+    @extend .banner-heading;
+    text-align: center;
+  }
+
+  @media (max-width: 576px) {
+    @include font-title($h-md);
+  }
+}
+
+.home-banner-heading {
+  @extend .banner-heading;
+  @include font-title($h-xl);
+
+  &--center {
+    @extend .home-banner-heading;
+    text-align: center;
+  }
+
+  @media (max-width: 576px) {
+    @include font-title($h-md);
+  }
+}
+
+.section-heading {
+  @include font-title($h-xl);
+  color: $black;
+
+  &--center {
+    @extend .section-heading;
+    text-align: center;
+  }
+
+  &--after {
+    @extend .section-heading;
+
+    @include font(400, $lg);
+    letter-spacing: normal;
+  }
+
+  @media (min-width: 769px) and (max-width: 1366px) {
+    @include font-title($h-lg);
+  }
+
+  @media (max-width: 768px) {
+    @include font-title($h-md);
+  }
+}
+
+.heading {
+  @include font(600, $lg);
+}
