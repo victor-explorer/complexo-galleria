@@ -79,7 +79,7 @@
           </div>
 
           <div class="col-lg-6">
-            <form class="complexo-form mt-4 mt-lg-0">
+            <form class="complexo-form mt-4 mt-lg-0 bg-fill">
               <span class="complexo-form-title">Oportunidades exclusivas para sua empresa</span>
               <input type="text" name="" id="" placeholder="Nome">
               <input type="email" name="" id="" placeholder="E-mail">
@@ -166,6 +166,10 @@
                     <li>Flexibilidade de layout</li>
                     <li>Paisagismo exuberante</li>
                   </ul>
+
+                  <div class="d-flex justify-content-center mt-4 mt-lg-0" data-aos="fade-up">
+                    <a href="https://api.whatsapp.com/send?phone=5519999667963&text=Ol%C3%A1!%0AQuero%20saber%20mais%20sobre%20o%20Office%20Park!" target="_blank" class="complexo-button" id="cta-carousel">Saiba mais</a>
+                  </div>
                 </div>
               </div>
 
@@ -183,6 +187,10 @@
                     <li>Depósitos privativos</li>
                     <li>Vagas de estacionamento cobertas, com a melhor relação de vagas/m² de escritório de Campinas</li>
                   </ul>
+
+                  <div class="d-flex justify-content-center mt-4 mt-lg-0" data-aos="fade-up">
+                    <a href="https://api.whatsapp.com/send?phone=5519999667963&text=Ol%C3%A1!%0AQuero%20saber%20mais%20sobre%20o%20Galleria%20Corporate!" target="_blank" class="complexo-button" id="cta-carousel">Saiba mais</a>
+                  </div>
                 </div>
               </div>
 
@@ -200,14 +208,15 @@
                     <li>Estacionamento ilimitado para visitantes</li>
                     <li>Flexibilidade de layout interno das salas</li>
                   </ul>
+
+                  <div class="d-flex justify-content-center mt-4 mt-lg-0" data-aos="fade-up">
+                    <a href="https://api.whatsapp.com/send?phone=5519999667963&text=Ol%C3%A1!%0AQuero%20saber%20mais%20sobre%20o%20Galleria%20Plaza!" target="_blank" class="complexo-button" id="cta-carousel">Saiba mais</a>
+                  </div>
+
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="d-flex justify-content-center justify-content-lg-start mt-4 mt-lg-0 offset-lg-1" data-aos="fade-up">
-          <a href="#contato" class="complexo-button" id="cta-carousel">Saiba mais</a>
         </div>
       </div>
 
